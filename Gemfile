@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
 
-ruby "2.5.5"
+#ruby "2.5.5"
 gem 'rails', '~> 5.0', '>= 5.0.1'
 gem 'rack'
+gem 'rack-cors'
 
 # Rails defaults
 gem 'sass-rails', '~> 5.0'

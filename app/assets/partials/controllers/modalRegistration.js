@@ -67,6 +67,7 @@ marketApp.controller("modalRegistration", [
         if (data.userSelect.name == "buyer") {
             $scope.data.buyer_role = true
             $scope.data.seller_role = false
+            $scope.data.statut_type = 2;
         }
         else {
             $scope.data.seller_role = true
@@ -95,7 +96,7 @@ marketApp.controller("modalRegistration", [
         });
     };
 
-    // A la souscription on stocke l'adresse de l'utilisation à partir de ses coordonnées
+    // A la souscription on stocke l'adresse de l'utilisateur à partir de ses coordonnées
     $scope.$on('devise:new-registration', function(event, user) {
     //$scope.$on('devise:login', function(event, user) {
         //coordinates.getCoordinates().then(function (position) {
@@ -111,8 +112,8 @@ marketApp.controller("modalRegistration", [
                 userId: user.id
             }
 
-            $log.log('Submiting address info.'); // kinda console logs this statement
-            $log.log(address);
+            $log.log("new-registration --> address : ", address); // kinda console logs this statement
+            //$log.log(address);
             new GetUserAddresses(
                 address 
             ).create();

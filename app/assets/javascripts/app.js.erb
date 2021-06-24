@@ -25,7 +25,7 @@
 	    }, function (error) {
             // do something about the error
             //console.log("Error Log",error.statusText);
-            console.info("Tchopers have to login...");
+            console.info("Tchopers have to login first...");
         });
 	}]);
 
@@ -99,7 +99,19 @@
 		
 	}]);
 
-
+    //marketApp.controller("ReloadPageCtrl", function($location, $scope, $http) {
+    //    var url = $location.absUrl()
+    //    $scope.reload = function () {
+    //        $http.get(url).
+    //        success(function (data) {
+    //            //$scope.todos = data.todos;
+    //            console.log(data)
+    //        });
+    //
+    //    };
+    //    $scope.reload();
+    //    $interval($scope.reload, 5000);
+    //});
 
 //marketApp.controller("CommerceDetailCtrl", function($routeParams, $scope, Commerce) {
 //  Commerce.get($routeParams.id).then(function(commerce) {
